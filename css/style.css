@@ -1,0 +1,222 @@
+/* Source sans font */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200;300;400;500;600;700;800;900&display=swap');
+/* Global CSS */
+*{
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6, p, ul{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+/* Header Section Start */
+header{
+    background: url(../images/banner-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+}
+.nav-item{
+    padding: 0 10px;
+}
+.nav-link{
+    color: #fff;
+    position: relative;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    padding: 0 !important;
+}
+.nav-link::before{
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: #008ed6;
+    left: 0;
+    bottom: -4px;
+    transition: all 0.4s ease-in-out;
+}
+.nav-link::after{
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: #008ed6;
+    right: 0;
+    bottom: -4px;
+    transition: all 0.4s ease-in-out;
+}
+.nav-link:hover{
+    color: #fff;
+}
+.nav-link:hover::before{
+    width: 48%;
+}
+.nav-link:hover::after{
+    width: 48%;
+}
+
+
+/* Banner Section Start */
+.content{
+
+}
+.content h4{
+    color: #008ed6;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 1.0px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+    .content h1{    
+    color: #fff;
+    padding-bottom: 15px;
+    font-weight: 600;
+}
+    .content p{
+    color: #808081;
+    margin-bottom: 55px;
+    padding-right: 110px;
+}
+    .content .btn-download{
+    color: #fff;
+    border: 1px solid grey;
+    padding: 15px 25px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+    .content .btn-view{
+    color: #fff;
+    color: #fff;
+    border: 1px solid grey;
+    padding: 15px 25px;
+    margin-left: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.btn-download:hover{
+    background-color: #008ed6;
+    border-color: #008ed6;
+    color: #fff;
+}
+.btn-view:hover{
+    background-color: #008ed6;
+    border-color: #008ed6;
+    color: #fff;
+}
+.height{    
+    min-height: 90vh;
+}
+.banner-mobile{
+    content: "";
+    position: absolute;
+    right: 117px;
+    bottom: 0;
+}
+
+/* Feature Section Start */
+.feature-section{
+    padding: 50px 0;
+}
+.heading{
+    margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 55px;
+}
+.heading h4{    
+    font-size: 15px;    
+    text-transform: uppercase;    
+    color: #008ed6;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+.heading h1{        
+    font-size: 30px;
+    font-weight: 700;
+}
+.heading span{    
+    display: block;    
+    width: 50px;    
+    height: 5px;        
+    /* background-color: #008ed6;     */
+    margin: 10px auto;
+    position: relative;
+}
+.heading span::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #008ed6;
+    transition: all 0.4s ease-in-out;
+}
+.heading span::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: #008ed6;
+    transition: all 0.4s ease-in-out;
+}
+.feature-section:hover span::before, .feature-section:hover span::after{
+    width: 48%;
+}
+.icon-box{
+    width: 90px;
+    height: 90px;
+    border: 1px solid #b8b8b8;
+    border-radius: 50%;
+    line-height: 90px;
+    text-align: center;
+    font-size: 35px;
+    margin: auto;
+}
+.feature-item .icon-box .fa{
+    color: #008ed6;
+}
+.feature-item{
+    text-align: center;
+}
+.feature-item h2{    
+    font-size: 25px;    
+    margin: 20px 0px 10px 0;
+    text-transform: capitalize;
+} 
+.feature-item p{
+    color: #b8b8b8;
+    padding: 0 19px;
+}
+
+
+@media (min-width: 320px) and (max-width: 576px){
+
+.navbar-toggler {color: #fff;background-color: #b8b8b8;}
+.nav-link {margin-bottom: 5px;}
+
+.content p {padding-right: 24px;}
+.banner-mobile .img-fluid {margin-left: 65px;width: 95%;}
+.content .btn-download {padding: 13px 13px;font-size: 15px;}
+.content .btn-view {padding: 13px 13px;font-size: 15px;}
+.content .btn-view {margin-left: 10px;}
+.content p {margin-bottom: 35px;}
+
+header{min-height: 120vh;}
+.feature-section {padding: 40px 0;}
+.heading h1 {font-size: 25px;}
+.heading {margin-bottom: 16px;}
+.feature-item p {margin-bottom: 30px;}
+
+.height {min-height: 80vh;}
+}
